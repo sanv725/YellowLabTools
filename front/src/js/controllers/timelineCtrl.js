@@ -68,7 +68,7 @@ timelineCtrl.controller('TimelineCtrl', ['$scope', '$rootScope', '$routeParams',
         
         // Detect the last event of all (before filtering) and read time
         var lastEvent = originalExecutions[originalExecutions.length - 1];
-        $scope.endTime =  lastEvent.data.timestamp + (lastEvent.data.time || 0);
+        $scope.endTime =  Math.ceil(lastEvent.data.timestamp + (lastEvent.data.time || 0));
 
         // Filter
         $scope.executionTree = [];
@@ -105,7 +105,7 @@ timelineCtrl.controller('TimelineCtrl', ['$scope', '$rootScope', '$routeParams',
                 var time = Math.min(node.data.time, 100) || 1;
 
                 for (var i=node.data.timestamp, max=node.data.timestamp + time ; i<max ; i++) {
-                    millisecondsArray[i] |= 1;
+                    millisecondsArray[Math.floor(i)] |= 1;
                 }
             }
         });
