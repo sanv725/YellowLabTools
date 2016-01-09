@@ -3,7 +3,6 @@ sudo: false
 node_js:
     - "0.12.4"
 before_install:
-    - "npm cache clean"
     - "npm install -g npm"
     - "npm install -g grunt-cli"
 install:
