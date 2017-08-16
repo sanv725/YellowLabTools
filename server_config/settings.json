@@ -1,5 +1,5 @@
 {
-    "serverPort": 8383,
+    "serverPort": 80,
     "phantomasEngine": "webkit",
     "googleAnalyticsId": "",
     "screenshotWidth": 400,
