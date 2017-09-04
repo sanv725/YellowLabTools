@@ -36,7 +36,7 @@ if (!process.env.GRUNTED) {
 
     app.locals.baseUrl = settings.baseUrl;
 
-    server.listen(process.env.PORT, function() {
+    server.listen(settings.serverPort, function() {
         console.log('Listening on port %d', server.address().port);
 
         // For the tests
